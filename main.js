@@ -39,4 +39,43 @@ ScrollReveal().reveal('.header__content .header__btn', {
     delay:1000,
 });
 
+//about container
 
+ScrollReveal().reveal('.about__content .section__header', {
+    ...scrollRevealOption,
+});
+
+ScrollReveal().reveal('.about__content .section__description', {
+    ...scrollRevealOption,
+    delay: 500,
+});
+ScrollReveal().reveal('.about__content .about__btn', {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+
+
+
+//services container
+
+ScrollReveal().reveal('.service__card', {
+    ...scrollRevealOption,
+    interval: 300,
+});
+
+//portfolio container
+
+ScrollReveal().reveal('.portfolio__card', {
+    duration: 1000,
+    interval: 500,
+});
+
+//downloadCV
+document.getElementById('downloadCV').addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = 'assets/kena-cv.pdf';
+    link.download = 'kena-cv.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
