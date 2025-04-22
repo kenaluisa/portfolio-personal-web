@@ -152,42 +152,49 @@ nav {
     display: none;
 
 }
+
 .header__container {
     display: grid;
     padding-top: 8rem;
     gap: 2rem;
     isolation: isolate;
 }
-.header__content{
+
+.header__content {
     text-align: center;
 }
+
 .header__content h1 {
     font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
 }
+
 .header__content h2 {
     font-size: 2.1rem;
     font-weight: 600;
     margin-bottom: .4rem;
     text-align: center;
 }
-.header__content .section__description{
+
+.header__content .section__description {
     margin-bottom: 2rem;
 }
-.header__image{
+
+.header__image {
     position: relative;
     isolation: isolate;
     z-index: -1;
 }
-.header__image img{
+
+.header__image img {
     max-width: 450px;
     margin-inline: auto;
     border-radius: 25rem;
 }
 
-.header__image::after{
+.header__image::after {
     position: absolute;
     content: "KENA";
     letter-spacing: 1.5rem;
@@ -202,35 +209,176 @@ nav {
     gap: 2rem;
 
 }
+
 .about__image {
     position: relative;
     isolation: isolate;
     max-width: 400px;
     margin: auto;
 }
-.about__img{
+
+.about__img {
     border-radius: 100%;
 }
-.about__bg-1, 
-.about__bg-2{
+
+.about__bg-1,
+.about__bg-2 {
     position: absolute;
     max-width: 160px;
     z-index: -1;
 }
-.about__bg-1{
+
+.about__bg-1 {
     top: 0;
     left: 0;
 }
-.about__bg-2{
+
+.about__bg-2 {
     right: 0;
     bottom: 0;
 }
-.about__content{
+
+.about__content {
     text-align: center;
 }
-.about__content .description{
+
+.about__content .description {
     margin-bottom: 2rem;
 }
+
+.service__grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.service__card {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-image: var(--gradient-color1);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service__card span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.service__card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.service__card p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--white);
+}
+
+.portfolio__grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.portfolio__card {
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio__card img {
+    transition: 0.5s;
+}
+
+.portfolio__card img:hover {
+    transform: scale(1.1);
+}
+
+.portfolio__banner {
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    background-image: var(--gradient-color1);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio__banner__card span {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+
+
+.portoloio__banner__card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.portfolio__banner__card p {
+    font-weight: 500;
+
+}
+
+.contact__container {
+    text-align: center;
+}
+.contact__container .logo{
+    margin-bottom: 1rem;
+}
+.contact__socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact__socials a {
+    padding: 7px 10px;
+    border-radius: 100%;
+    background:rgba(255, 255, 255, 0.2);
+    font-size: 2rem;
+    color: var(--white);
+    transition: 0.3s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact__socials a:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+.footer{
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    font-size: .9rem;
+}
+
+@media (width > 578px) {
+    .service__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio__banner {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
+
+}
+
 @media (width > 768px) {
     nav {
         padding: 2rem 1rem;
@@ -269,40 +417,67 @@ nav {
     .btn__large {
         display: flex;
     }
-    .header__container{
+
+    .header__container {
         padding-top: 5rem;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
     }
-    .header__image{
+
+    .header__image {
         grid-area: 1/3/2/5;
     }
-    .header__image img{
+
+    .header__image img {
         margin-inline-start: unset;
     }
-    .header__content{
+
+    .header__content {
         grid-area: 1/1/2/4;
         text-align: left;
     }
+
     .header__content h1 {
         font-size: 5.3rem;
         line-height: 6rem;
         text-align: left;
     }
+
     .header__content h2 {
         font-size: 5.3rem;
         line-height: 6rem;
         text-align: left;
     }
-    .header__content .section__description{
+
+    .header__content .section__description {
         margin-inline-start: unset;
         text-align: left;
     }
-    .about__container{
-        grid-template-columns: repeat(2,1fr);
-        align-items: center;   
+
+    .about__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
-    .about__content, .about__content :is(.section__header, .section__description){
+
+    .about__content,
+    .about__content :is(.section__header, .section__description) {
         text-align: left;
+    }
+
+    .service__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio__container :is(.section__header, .section__description) {
+        text-align: left;
+        margin-inline-start: unset;
+    }
+
+    .portfolio__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio__banner {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
