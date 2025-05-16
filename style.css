@@ -481,3 +481,12 @@ nav {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+#theme-toggle {
+    height: 2rem;
+    width: 2rem;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+}
